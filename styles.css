@@ -78,4 +78,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+/* Adjusting the positioning of the title to prevent it from being cut off */
+.album-page {
+  padding-top: 100px; /* This will push the content down */
+}
+
 }
