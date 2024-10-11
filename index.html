@@ -2,206 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheap Sensationalism</title>
-    
     <style>
+        /* General Styles */
         body {
-            display: flex;
             margin: 0;
             padding: 0;
             font-family: 'Sans', sans-serif;
             background-color: #000000;
             color: #FFFFFF;
-            overflow: hidden;
         }
 
+        /* Banner Styles */
         .banner {
             width: 100%;
-            background-color: #000;
-            padding: 20px;
+            background-color: #000000;
+            text-align: center;
+            padding: 20px 0;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .banner h1 {
-            font-family: 'Heavy Sans', sans-serif;
-            font-size: 3rem;
-            font-weight: bold;
-            color: #FFFFFF;
             margin: 0;
+            font-size: 2.5rem;
+            color: #FFFFFF;
         }
 
-        .banner-icons {
+        /* Content Wrapper */
+        .content {
+            margin-top: 80px; /* To avoid overlapping with the fixed banner */
             display: flex;
+            flex-direction: column;
             align-items: center;
         }
 
-        .banner-icons a img {
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-        }
-
-        .left-column {
-            flex: 0 0 40%;
-            height: 100vh;
-            overflow-y: auto;
-            text-align: center;
-            background-color: #000;
-            color: #fff;
-            padding: 60px 20px 20px;
-            box-sizing: border-box;
-        }
-
-        .right-column {
-            flex: 1;
-            padding: 80px 40px;
-            box-sizing: border-box;
-            overflow-y: auto;
-            max-height: 100vh;
-            text-align: left;
-        }
-
-        .artwork img {
+        /* Album Cover */
+        .album-cover img {
             max-width: 80%;
             height: auto;
-            margin: 20px auto;
-            display: block;
+            margin: 20px 0;
         }
 
-        .listen-now h2 {
-            font-family: 'Heavy Sans', sans-serif;
-            font-size: 3rem;
+        /* Sparkling Text */
+        .sparkling-text h2 {
             color: #9400FF;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                text-shadow: 
+                    0 0 5px #9400FF, 
+                    0 0 10px #9400FF, 
+                    0 0 20px #9400FF, 
+                    0 0 30px #9400FF;
+            }
+            50% {
+                text-shadow: 
+                    0 0 10px #FFFFFF, 
+                    0 0 20px #FFFFFF, 
+                    0 0 30px #FFFFFF, 
+                    0 0 40px #FFFFFF;
+            }
+        }
+
+        /* Spotify Player */
+        .spotify-player iframe {
+            width: 300px;
+            height: 380px;
+            border: none;
+            margin: 20px 0;
+        }
+
+        /* Music Service Icons */
+        .music-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 20px;
         }
 
-        .music-players iframe {
-            border: none;
-            width: 250px;
-            height: 150px;
+        .music-icons a img {
+            width: 50px;
+            height: 50px;
+            margin: 0 15px;
         }
 
-        .icons a img {
-            width: 40px;
-            height: 40px;
-            margin: 10px;
+        /* Text Content */
+        .text-content {
+            max-width: 800px;
+            padding: 0 20px;
         }
 
-        hr {
-            border: 1px solid #FFFFFF;
-            margin: 40px 0;
+        .text-content h2 {
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            margin-top: 40px;
         }
 
-        /* Responsive styles for mobile */
+        .text-content p {
+            color: #FFFFFF;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .text-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .text-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .text-content ul li strong {
+            color: #9400FF;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-                overflow-y: auto;
-            }
-
             .banner h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            .left-column, .right-column {
-                width: 100%;
-                margin: 0;
-                padding: 80px 20px 20px;
-                box-sizing: border-box;
+            .sparkling-text h2 {
+                font-size: 1.5rem;
             }
 
-            .listen-now h2 {
-                font-size: 2.5rem;
+            .spotify-player iframe {
+                width: 80%;
+                height: 300px;
             }
 
-            .music-players iframe {
-                width: 100%;
-                height: 150px;
+            .music-icons a img {
+                width: 40px;
+                height: 40px;
+                margin: 0 10px;
             }
 
-            .icons a img {
-                width: 30px;
-                height: 30px;
+            .text-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .text-content p {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Banner -->
     <div class="banner">
         <h1>Cheap Sensationalism</h1>
-        <div class="banner-icons">
-            <a href="https://open.spotify.com/album/{album_id}" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
-            </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Album Cover Image -->
+        <div class="album-cover">
+            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/temp_main/CheapElephant_Concept_4%20(1).png" alt="Album Cover">
+        </div>
+
+        <!-- Sparkling Text -->
+        <div class="sparkling-text">
+            <h2>Don't fight the urge...listen</h2>
+        </div>
+
+        <!-- Spotify Player -->
+        <div class="spotify-player">
+            <iframe src="https://open.spotify.com/embed/album/{album_id}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+
+        <!-- Music Service Icons -->
+        <div class="music-icons">
             <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
+            </a>
+            <a href="https://open.spotify.com/album/{album_id}" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
             </a>
             <a href="https://music.youtube.com/playlist?list={playlist_id}" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_music_icon.png" alt="YouTube Music">
             </a>
         </div>
-    </div>
-    <div class="left-column">
-        <section class="artwork">
-            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/temp_main/CheapElephant_Concept_4%20(1).png" alt="Artwork for Cheap Sensationalism">
-        </section>
-        <section class="listen-now">
-            <h2>Listen now:</h2>
-            <div class="music-players">
-                <iframe src="https://open.spotify.com/embed/album/{album_id}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                <div class="icons">
-                    <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
-                    </a>
-                    <a href="https://itunes.apple.com/us/album/{album_id}" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/ITunes_logo.svg" alt="iTunes">
-                    </a>
-                    <a href="https://music.youtube.com/playlist?list={playlist_id}" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_music_icon.png" alt="YouTube Music">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="right-column">
-        <section class="summary">
-            <h2>tl;dr:</h2>
-            <p>Thrilled to share our self-titled album, <em>Cheap Sensationalism</em>. The name captures the way the last decade has been vibing.</p>
-            <p>This album has been a long time coming. We've been delaying this due to overthinking the nuances of releasing music. We decided to forgo an intricate release process and just get these songs out to some friends and family.</p>
-            <p>If the music has anything going for it, it is the variation. These songs span a lot of different phases, each increasing the odds that there is a moment that catches your attention. We'll be adding more soon. For now, we hope you have a listen. Reach out and tell us what you think. Take a risk and share with a friend.</p>
-        </section>
 
-        <section class="album-notes">
-            <h2>Album notes:</h2>
-            <p>I wrote most of these songs sometime between 2010 and 2014. I tracked most of these songs in 2020 at Tiny Telephone in San Francisco with my brother, Mic, who managed to learn these songs well-enough at some bonkers practice space the night before. The last day at the studio was the last day of the ante-lockdown life in California.</p>
-            <p>There is enough distance in time, location and orientation that I barely recognize myself in these songs. Maybe the very late David Hume was right: a deep look for the self will leave you (whoever that is) empty handed.</p>
-            <p>Honestly, I don't write songs like this anymore. I can't stand lyrics. I prefer more awkward chords. The energy I go for is closer to what you'd hear in an elevator than a nightclub. This is probably because I am older and boring now. The luxury of ennui and angst --- the juice of a good song --- disappears with the profoundly mundane tasks that accrue with time along with a new set responsibilities. The access to the vantage point of a past self, likewise, probably doesn't disappear, but gets buried under the sediment that accrues across time.</p>
-            <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has sense of how vulnerable that feeling is. Blaming some other person I don't know --- call them Derek T-1 --- for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
-        </section>
+        <!-- Text Content -->
+        <div class="text-content">
+            <!-- Summary Section -->
+            <section class="summary">
+                <h2>tl;dr:</h2>
+                <p>Thrilled to share our self-titled album, <em>Cheap Sensationalism</em>. The name captures the way the last decade has been vibing.</p>
+                <p>This album has been a long time coming. We've been delaying this due to overthinking the nuances of releasing music. We decided to forgo an intricate release process and just get these songs out to some friends and family.</p>
+                <p>If the music has anything going for it, it is the variation. These songs span a lot of different phases, each increasing the odds that there is a moment that catches your attention. We'll be adding more soon. For now, we hope you have a listen. Reach out and tell us what you think. Take a risk and share with a friend.</p>
+            </section>
 
-        <section class="praise">
-            <h2>People to thank:</h2>
-            <ul>
-                <li><strong>Danielle Goldsmith</strong> of Tiny Telephone who tracked, mixed and mastered 90% of this music, and more importantly was just incredible to work with. She found a way to squeeze out the good and hide away most of the bad.</li>
-                <li><strong>Mic DeBellis</strong>, drummer and bandmate, for learning these songs over the course of an evening to deliver some funky beatz. He also dealt with me asking every two days for him to come track drums.</li>
-                <li><strong>Matt Berger</strong>, <strong>Nina DeBellis</strong>, and <strong>Derek Hensinger</strong> for giving feedback that helped us shape these songs. A huge shoutout to Nina for hearing me ask "but do you actually like this?" 10000000x.</li>
-            </ul>
-        </section>
+            <!-- Album Notes Section -->
+            <section class="album-notes">
+                <h2>Album notes:</h2>
+                <p>I wrote most of these songs sometime between 2010 and 2014. I tracked most of these songs in 2020 at Tiny Telephone in San Francisco with my brother, Mic, who managed to learn these songs well enough at some bonkers practice space the night before. The last day at the studio was the last day of the ante-lockdown life in California.</p>
+                <p>There is enough distance in time, location, and orientation that I barely recognize myself in these songs. Maybe the very late David Hume was right: a deep look for the self will leave you (whoever that is) empty-handed.</p>
+                <p>Honestly, I don't write songs like this anymore. I can't stand lyrics. I prefer more awkward chords. The energy I go for is closer to what you'd hear in an elevator than a nightclub. This is probably because I am older and boring now. The luxury of ennui and angst—the juice of a good song—disappears with the profoundly mundane tasks that accrue with time along with a new set of responsibilities. The access to the vantage point of a past self, likewise, probably doesn't disappear but gets buried under the sediment that accrues across time.</p>
+                <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has a sense of how vulnerable that feeling is. Blaming some other person I don't know—call them Derek T-1—for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
+            </section>
 
-        <section class="ambitions">
-            <h2>Aspirations:</h2>
-            <p>We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some art work, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
-            <p>We hope you enjoy it. We'd love to hear from you. If you like it, share with some friends and family.</p>
-            <p>- Derek</p>
-        </section>
+            <!-- People to Thank Section -->
+            <section class="praise">
+                <h2>People to thank:</h2>
+                <ul>
+                    <li><strong>Danielle Goldsmith</strong> of Tiny Telephone who tracked, mixed, and mastered 90% of this music, and more importantly, was just incredible to work with. She found a way to squeeze out the good and hide away most of the bad.</li>
+                    <li><strong>Mic DeBellis</strong>, drummer and bandmate, for learning these songs over the course of an evening to deliver some funky beats. He also dealt with me asking every two days for him to come track drums.</li>
+                    <li><strong>Matt Berger</strong>, <strong>Nina DeBellis</strong>, and <strong>Derek Hensinger</strong> for giving feedback that helped us shape these songs. A huge shoutout to Nina for hearing me ask "but do you actually like this?" 10,000 times.</li>
+                </ul>
+            </section>
+
+            <!-- Aspirations Section -->
+            <section class="ambitions">
+                <h2>Aspirations:</h2>
+                <p>We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some artwork, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple of months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
+                <p>We hope you enjoy it. We'd love to hear from you. If you like it, share it with some friends and family.</p>
+                <p>- Derek</p>
+            </section>
+        </div>
     </div>
 </body>
 </html>
-
