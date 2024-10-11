@@ -40,10 +40,19 @@
         }
 
         /* Album Cover */
-        .album-cover img {
-            max-width: 80%;
-            height: auto;
+        .album-cover {
+            width: 80%;
+            max-width: 600px;
             margin: 20px 0;
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 45vh; /* Image occupies up to 45% of viewport height */
+            object-fit: contain;
         }
 
         /* Sparkling Text */
@@ -53,6 +62,7 @@
             text-align: center;
             position: relative;
             animation: sparkle 2s infinite;
+            margin: 10px 0;
         }
 
         @keyframes sparkle {
@@ -73,11 +83,16 @@
         }
 
         /* Spotify Player */
+        .spotify-player {
+            margin: 20px 0;
+            text-align: center;
+        }
+
         .spotify-player iframe {
             width: 300px;
             height: 380px;
             border: none;
-            margin: 20px 0;
+            max-width: 80%;
         }
 
         /* Music Service Icons */
@@ -209,6 +224,9 @@
                 <p>There is enough distance in time, location, and orientation that I barely recognize myself in these songs. Maybe the very late David Hume was right: a deep look for the self will leave you (whoever that is) empty-handed.</p>
                 <p>Honestly, I don't write songs like this anymore. I can't stand lyrics. I prefer more awkward chords. The energy I go for is closer to what you'd hear in an elevator than a nightclub. This is probably because I am older and boring now. The luxury of ennui and angst—the juice of a good song—disappears with the profoundly mundane tasks that accrue with time along with a new set of responsibilities. The access to the vantage point of a past self, likewise, probably doesn't disappear but gets buried under the sediment that accrues across time.</p>
                 <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has a sense of how vulnerable that feeling is. Blaming some other person I don't know—call them Derek T-1—for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
+                <p>We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some artwork, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple of months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
+                <p>We hope you enjoy it. We'd love to hear from you. If you like it, share it with some friends and family.</p>
+                <p>- Derek</p>
             </section>
 
             <!-- People to Thank Section -->
@@ -220,14 +238,7 @@
                     <li><strong>Matt Berger</strong>, <strong>Nina DeBellis</strong>, and <strong>Derek Hensinger</strong> for giving feedback that helped us shape these songs. A huge shoutout to Nina for hearing me ask "but do you actually like this?" 10,000 times.</li>
                 </ul>
             </section>
-
-            <!-- Aspirations Section -->
-            <section class="ambitions">
-                <h2>Aspirations:</h2>
-                <p>We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some artwork, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple of months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
-                <p>We hope you enjoy it. We'd love to hear from you. If you like it, share it with some friends and family.</p>
-                <p>- Derek</p>
-            </section>
+                
         </div>
     </div>
 </body>
