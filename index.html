@@ -44,9 +44,8 @@
             border: none;
         }
 
-        .music-players ul {
-            list-style-type: none;
-            padding: 0;
+        .music-players .icons {
+            margin-top: 20px;
         }
 
         .music-players a {
@@ -54,6 +53,13 @@
             color: #FFFFFF;
             text-decoration: none;
             transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .music-players a img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
         }
 
         .music-players a:hover {
@@ -112,17 +118,21 @@
         </header>
 
         <section class="artwork">
-            <img src="artwork-placeholder.jpg" alt="Artwork for Cheap Sensationalism">
+            <img src="https://drive.google.com/uc?export=view&id=1mSK98Jf7sf7dYMsN4Y5fHyqGT7m2WxIM" alt="Artwork for Cheap Sensationalism">
         </section>
 
         <section class="listen-now">
             <h2>Listen now:</h2>
             <div class="music-players">
                 <iframe src="https://open.spotify.com/embed/album/{album_id}" width="300" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/{album_id}"></iframe>
-                <ul>
-                    <li><a href="#">SoundCloud</a></li>
-                </ul>
+                <div class="icons">
+                    <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
+                    </a>
+                    <a href="https://itunes.apple.com/us/album/{album_id}" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/ITunes_logo.svg" alt="iTunes">
+                    </a>
+                </div>
             </div>
         </section>
 
