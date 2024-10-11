@@ -5,43 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheap Sensationalism</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sans', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .left-column {
+            position: fixed;
+            width: 33%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .right-column {
+            margin-left: 33%;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 67%;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        header h1 {
+            font-family: 'Heavy Sans', sans-serif;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #E6FF00;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+
+        .artwork img {
+            max-width: 80%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .listen-now h2 {
+            font-family: 'Heavy Sans', sans-serif;
+            font-size: 3rem;
+            color: #9400FF;
+            margin-bottom: 20px;
+        }
+
+        .music-players iframe {
+            border: none;
+            width: 250px;
+            height: 150px;
+        }
+
+        .icons a img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+
+        hr {
+            border: 1px solid #FFFFFF;
+            margin: 40px 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="left-column" style="position: fixed; width: 33%; height: 100%; overflow: hidden; text-align: center; background-color: #000; color: #fff; padding: 20px; box-sizing: border-box;">
+    <div class="left-column">
         <header>
             <h1>Cheap Sensationalism</h1>
         </header>
         <section class="artwork">
-            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/main/album_cover.png" alt="Artwork for Cheap Sensationalism" style="max-width: 80%; height: auto;">
+            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/temp_main/CheapElephant_Concept_4%20(1).png" alt="Artwork for Cheap Sensationalism">
         </section>
         <section class="listen-now">
             <h2>Listen now:</h2>
             <div class="music-players">
-                <iframe src="https://open.spotify.com/embed/album/{album_id}" width="250" height="150" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                <div class="icons">
-                    <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music" style="width: 40px; height: 40px;">
-                    </a>
-                    <a href="https://itunes.apple.com/us/album/{album_id}" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/ITunes_logo.svg" alt="iTunes" style="width: 40px; height: 40px;">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="right-column" style="margin-left: 33%; padding: 20px; box-sizing: border-box; max-width: 67%; overflow-y: scroll;">
-        <header>
-            <h1>Cheap Sensationalism</h1>
-        </header>
-
-        <section class="artwork">
-            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/main/album_cover.png" alt="Artwork for Cheap Sensationalism">
-        </section>
-
-        <section class="listen-now">
-            <h2>Listen now:</h2>
-            <div class="music-players">
-                <iframe src="https://open.spotify.com/embed/album/{album_id}" width="800" height="150" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://open.spotify.com/embed/album/{album_id}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 <div class="icons">
                     <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
@@ -52,17 +99,16 @@
                 </div>
             </div>
         </section>
-
-        <hr style="margin: 40px 0;">
-
-        <section class="summary" style="text-align: left; max-width: 800px; margin: auto;">
+    </div>
+    <div class="right-column">
+        <section class="summary">
             <h2>tl;dr:</h2>
             <p>Thrilled to share our self-titled album, <em>Cheap Sensationalism</em>. The name captures the way the last decade has been vibing.</p>
             <p>It has been a long time coming. We've been delaying this due to overthinking the nuances of releasing music. We decided to forgo an intricate release process and just get these songs out to some friends and family.</p>
             <p>If the music has anything going for it, it is the variation. These songs span a lot of different phases, so maybe there are a few moments that will catch your attention. We'll be adding more content to infinite field of content soon. For now, we hope you have a listen. Reach out and tell us what you think. Share it with a friend.</p>
         </section>
 
-        <section class="album-notes" style="text-align: left; max-width: 800px; margin: auto;">
+        <section class="album-notes">
             <h2>Album notes:</h2>
             <p>I wrote most of these songs sometime between 2010 and 2014. I tracked most of these songs in 2020 at Tiny Telephone in San Francisco with my brother, Mic, who managed to learn these songs well-enough at some bonkers practice space the night before. The last day at the studio was the last day of the ante-lockdown in California.</p>
             <p>There is enough distance in time, location and orientation that I barely recognize myself in these songs. Maybe the very late David Hume was right: a deep look for the self will leave you (whoever that is) empty handed.</p>
@@ -70,7 +116,7 @@
             <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has sense of how vulnerable that feeling is. Blaming some other person I don't know --- call them Derek T-1 --- for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
         </section>
 
-        <section class="praise" style="text-align: left; max-width: 800px; margin: auto;">
+        <section class="praise">
             <h2>People to thank:</h2>
             <ul>
                 <li><strong>Danielle Goldsmith</strong> of Tiny Telephone who tracked, mixed and mastered 90% of this music, and more importantly was just incredible to work with. She found a way to squeeze out the good and hide away most of the bad.</li>
@@ -79,7 +125,7 @@
             </ul>
         </section>
 
-        <section class="ambitions" style="text-align: left; max-width: 800px; margin: auto;">
+        <section class="ambitions">
             <h2>Aspirations:</h2>
             <p>We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some art work, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
             <p>We hope you enjoy it. We'd love to hear from you. If you like it, share with some friends and family.</p>
