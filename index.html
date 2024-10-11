@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" style="text-align: center;">
+    <div class="left-column" style="position: fixed; width: 33%; height: 100%; overflow: hidden; text-align: center; background-color: #000; color: #fff; padding: 20px; box-sizing: border-box;">
+        <header>
+            <h1>Cheap Sensationalism</h1>
+        </header>
+        <section class="artwork">
+            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/main/album_cover.png" alt="Artwork for Cheap Sensationalism" style="max-width: 80%; height: auto;">
+        </section>
+        <section class="listen-now">
+            <h2>Listen now:</h2>
+            <div class="music-players">
+                <iframe src="https://open.spotify.com/embed/album/{album_id}" width="250" height="150" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <div class="icons">
+                    <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://itunes.apple.com/us/album/{album_id}" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/ITunes_logo.svg" alt="iTunes" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="right-column" style="margin-left: 33%; padding: 20px; box-sizing: border-box; max-width: 67%; overflow-y: scroll;">
         <header>
             <h1>Cheap Sensationalism</h1>
         </header>
