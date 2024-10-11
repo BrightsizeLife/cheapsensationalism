@@ -19,12 +19,14 @@
         .banner {
             width: 100%;
             background-color: #000;
-            text-align: center;
             padding: 20px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .banner h1 {
@@ -35,22 +37,32 @@
             margin: 0;
         }
 
+        .banner-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .banner-icons a img {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
         .left-column {
-            width: 40%;
+            flex: 0 0 40%;
             height: 100vh;
             overflow-y: auto;
             text-align: center;
             background-color: #000;
             color: #fff;
-            padding: 60px 20px 20px; /* Adjust padding to account for banner */
+            padding: 60px 20px 20px;
             box-sizing: border-box;
         }
 
         .right-column {
-            margin-left: 80%;
-            padding: 80px 40px; /* Adjust padding to account for banner */
+            flex: 1;
+            padding: 80px 40px;
             box-sizing: border-box;
-            width: 60%;
             overflow-y: auto;
             max-height: 100vh;
             text-align: left;
@@ -124,6 +136,17 @@
 <body>
     <div class="banner">
         <h1>Cheap Sensationalism</h1>
+        <div class="banner-icons">
+            <a href="https://open.spotify.com/album/{album_id}" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
+            </a>
+            <a href="https://music.apple.com/us/album/{album_id}" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
+            </a>
+            <a href="https://music.youtube.com/playlist?list={playlist_id}" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_music_icon.png" alt="YouTube Music">
+            </a>
+        </div>
     </div>
     <div class="left-column">
         <section class="artwork">
@@ -181,3 +204,4 @@
     </div>
 </body>
 </html>
+
