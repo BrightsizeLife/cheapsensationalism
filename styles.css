@@ -1,0 +1,111 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    font-family: 'Heavy Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #E6FF00;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.artwork img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.listen-now h2 {
+    font-family: 'Heavy Sans', sans-serif;
+    font-size: 4rem;
+    color: #9400FF;
+    margin-bottom: 40px;
+}
+
+.music-players iframe {
+    margin: 20px 0;
+    border: none;
+    width: 800px;
+    height: 150px;
+}
+
+.music-players .icons {
+    margin-top: 20px;
+}
+
+.music-players a {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+.music-players a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.music-players a:hover {
+    color: #39FF14;
+}
+
+hr {
+    border: 1px solid #FFFFFF;
+    margin: 40px 0;
+}
+
+.summary h2, .album-notes h2, .praise h2 {
+    font-family: 'Heavy Sans', sans-serif;
+    font-size: 3rem;
+    color: #39FF14;
+    margin: 40px 0;
+}
+
+.summary p, .album-notes p, .ambitions p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.praise ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.praise li {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.ambitions p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #39FF14;
+}
