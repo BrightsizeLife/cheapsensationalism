@@ -61,36 +61,27 @@
             font-size: 2rem;
             text-align: center;
             position: relative;
-            animation: sparkle 2s infinite;
+            animation: tv-static 1s infinite;
             margin: 10px 0;
-            background: linear-gradient(90deg, #99ffcc, #ff99cc, #cc99ff, #99ccff, #ffcc99);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 400% 400%;
-            animation: gradient 5s ease infinite, sparkle 2s infinite;
         }
         
-        @keyframes sparkle {
-            0%, 100% {
-                text-shadow:
-                    0 0 5px #99ffcc,
-                    0 0 10px #99ffcc,
-                    0 0 20px #99ffcc,
-                    0 0 30px #99ffcc;
-            }
-            50% {
-                text-shadow:
-                    0 0 10px #FFFFFF,
-                    0 0 20px #FFFFFF,
-                    0 0 30px #FFFFFF,
-                    0 0 40px #FFFFFF;
-            }
+        @keyframes tv-static {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* Add TV static background */
+        body:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/gif;base64,R0lGODlhEAAQAPAAAP///wAAACH5BAEAAAAALAAAAAAQABAAAAIghI+py+0Po5yUFQA7') repeat;
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* Spotify Player */
