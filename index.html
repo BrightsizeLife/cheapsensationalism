@@ -23,7 +23,7 @@
             top: 0;
             left: 0;
             z-index: 100;
-            animation: color-change 10s infinite;
+            animation: color-change 5s infinite;
         }
         
         .banner h1 {
@@ -44,7 +44,7 @@
 
         /* Content Wrapper */
         .content {
-            margin-top: 80px; /* To avoid overlapping with the fixed banner */
+            margin-top: 160px; /* To avoid overlapping with the fixed banner */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -90,13 +90,13 @@
             text-align: center;
         }
 
+        /* Spotify Player */
         .spotify-player iframe {
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 600px; /* Same max-width as the album cover */
             margin: 20px 0 auto;
             height: 300px;
             border: none;
-            max-width: 80%;
         }
 
         .music-icons {
