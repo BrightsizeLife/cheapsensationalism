@@ -63,23 +63,34 @@
             position: relative;
             animation: sparkle 2s infinite;
             margin: 10px 0;
+            background: linear-gradient(90deg, #99ffcc, #ff99cc, #cc99ff, #99ccff, #ffcc99);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite, sparkle 2s infinite;
         }
-
+        
         @keyframes sparkle {
             0%, 100% {
-                text-shadow: 
-                    0 0 5px #99ffcc, 
-                    0 0 10px #99ffcc, 
-                    0 0 20px #99ffcc, 
+                text-shadow:
+                    0 0 5px #99ffcc,
+                    0 0 10px #99ffcc,
+                    0 0 20px #99ffcc,
                     0 0 30px #99ffcc;
             }
             50% {
-                text-shadow: 
-                    0 0 10px #FFFFFF, 
-                    0 0 20px #FFFFFF, 
-                    0 0 30px #FFFFFF, 
+                text-shadow:
+                    0 0 10px #FFFFFF,
+                    0 0 20px #FFFFFF,
+                    0 0 30px #FFFFFF,
                     0 0 40px #FFFFFF;
             }
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         /* Spotify Player */
