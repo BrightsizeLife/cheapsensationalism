@@ -57,7 +57,7 @@
 
         /* Sparkling Text */
         .sparkling-text h2 {
-            color: #9400FF;
+            color: #99ffcc;
             font-size: 2rem;
             text-align: center;
             position: relative;
@@ -68,10 +68,10 @@
         @keyframes sparkle {
             0%, 100% {
                 text-shadow: 
-                    0 0 5px #9400FF, 
-                    0 0 10px #9400FF, 
-                    0 0 20px #9400FF, 
-                    0 0 30px #9400FF;
+                    0 0 5px #99ffcc, 
+                    0 0 10px #99ffcc, 
+                    0 0 20px #99ffcc, 
+                    0 0 30px #99ffcc;
             }
             50% {
                 text-shadow: 
@@ -95,17 +95,16 @@
             max-width: 80%;
         }
 
-        /* Music Service Icons */
         .music-icons {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
         }
-
+        
         .music-icons a img {
-            width: 50px;
-            height: 50px;
+            height: 50px; /* Fixed height */
+            width: auto;  /* Auto width to maintain aspect ratio */
             margin: 0 15px;
         }
 
@@ -137,7 +136,7 @@
         }
 
         .text-content ul li strong {
-            color: #9400FF;
+            color: #99ffcc;
         }
 
         /* Responsive Styles */
