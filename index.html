@@ -23,12 +23,23 @@
             top: 0;
             left: 0;
             z-index: 100;
+            animation: color-change 10s infinite;
         }
-
+        
         .banner h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 5rem; /* Make the text giant */
             color: #FFFFFF;
+        }
+        
+        /* Keyframes for color changing effect */
+        @keyframes color-change {
+            0% { background-color: white; }
+            20% { background-color: #99ffcc; }
+            40% { background-color: #deff9d; }
+            60% { background-color: #be9dff; }
+            80% { background-color: #ff9dde; }
+            100% { background-color: white; }
         }
 
         /* Content Wrapper */
@@ -166,7 +177,7 @@
 <body>
     <!-- Banner -->
     <div class="banner">
-        <h1>Cheap Sensationalism</h1>
+        <h1>CHEAP SENSATIONALISM</h1>
     </div>
 
     <!-- Main Content -->
