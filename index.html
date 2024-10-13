@@ -55,17 +55,17 @@
             object-fit: contain;
         }
 
-             /* Sparkling Text */
+        /* Sparkling Text */
         .sparkling-text h2 {
-            color: transparent;
             font-size: 2rem;
             text-align: center;
             position: relative;
             margin: 10px 0;
+            color: #FFFFFF;
+            animation: tv-static 1s steps(10) infinite;
             background: url('data:image/gif;base64,R0lGODlhEAAQAPAAAP///wAAACH5BAEAAAAALAAAAAAQABAAAAIghI+py+0Po5yUFQA7') repeat;
             -webkit-background-clip: text;
             background-clip: text;
-            animation: tv-static 1s steps(10) infinite;
         }
         
         @keyframes tv-static {
@@ -80,7 +80,9 @@
         }
 
         .spotify-player iframe {
-            width: 600px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0 auto;
             height: 300px;
             border: none;
             max-width: 80%;
