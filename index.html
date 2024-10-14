@@ -85,18 +85,20 @@
         }
         
         /* Spotify Player */
-        .spotify-player {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        /* Spotify Player */
         .spotify-player iframe {
             width: 100%;
-            max-width: 600px; /* Same max-width as the album cover */
-            margin: 20px 0 auto;
-            height: 300px;
+            height: 380px; /* Adjusted height for better visibility */
             border: none;
+        }
+        
+        /* Media Wrapper (Album Cover and Spotify Player) */
+        .media-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
         }
 
         .music-icons {
@@ -207,19 +209,22 @@
 
     <!-- Main Content -->
     <div class="content">
-        <!-- Album Cover Image -->
-        <div class="album-cover">
-            <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/temp_main/CheapElephant_Concept_4%20(1).png" alt="Album Cover">
-        </div>
-
-        <!-- Sparkling Text -->
-        <div class="sparkling-text h2">
-            <h2>Don't fight the urge...listen</h2>
-        </div>
-
-        <!-- Spotify Player -->
-        <div class="spotify-player">
-            <iframe src="https://open.spotify.com/embed/album/7kjmvtW08iNlCKEU0qgKXN" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        
+        <div class="media-wrapper">
+            <!-- Album Cover Image -->
+            <div class="album-cover">
+                <img src="https://raw.githubusercontent.com/BrightsizeLife/cheapsensationalism/temp_main/CheapElephant_Concept_4%20(1).png" alt="Album Cover">
+            </div>
+    
+            <!-- Sparkling Text -->
+            <div class="sparkling-text h2">
+                <h2>Don't fight the urge... listen</h2>
+            </div>
+    
+            <!-- Spotify Player -->
+            <div class="spotify-player">
+                <iframe src="https://open.spotify.com/embed/album/7kjmvtW08iNlCKEU0qgKXN" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
         </div>
 
         <!-- Music Service Icons -->
