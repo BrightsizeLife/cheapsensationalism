@@ -172,6 +172,31 @@
                 font-size: 0.9rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .album-cover img {
+                max-height: 35vh; /* Reduce the max height for better fit on smaller mobile screens */
+            }
+
+            .spotify-player iframe {
+                width: 100%;
+                height: 200px; /* Adjust height for smaller screens */
+            }
+
+            .music-icons a img {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
+
+            .text-content h2 {
+                font-size: 1.2rem;
+            }
+
+            .text-content p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -199,14 +224,12 @@
 
         <!-- Music Service Icons -->
         <div class="music-icons">
-            <!-- #https://www.apple.com/v/apple-music/ab/images/overview/apple_one__b6z8p5921zbm_large_2x.jpg -->
             <a href="https://open.spotify.com/album/7kjmvtW08iNlCKEU0qgKXN" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
             </a>
             <a href="https://music.youtube.com/playlist?list=OLAK5uy_l_jEZiq2LYmeKp6hQvg6if0eislc_NRJA" target="_blank">
                 <img src="https://music.youtube.com/img/on_platform_logo_dark.svg" alt="YouTube Music">
             </a>
-            
         </div>
 
         <!-- Text Content -->
@@ -224,10 +247,10 @@
                 <h2>Album notes:</h2>
                 <p>I wrote most of these songs sometime between 2010 and 2014. I tracked most of these songs in 2020 at Tiny Telephone in San Francisco with my brother, Mic, who managed to learn these songs well enough at some bonkers practice space the night before. The last day at the studio was the last day of the ante-lockdown life in California.</p>
                 <p>There is enough distance in time, location, and orientation that I barely recognize myself in these songs. Maybe the very late David Hume was right: a deep look for the self will leave you (whoever that is) empty-handed.</p>
-                <p>Honestly, I don't write songs like this anymore. I can't stand lyrics. I prefer more awkward chords. The energy I go for is closer to what you'd hear in an elevator than a nightclub. This is probably because I am older and boring now. The luxury of ennui and angst—the juice of a good song—disappears with the profoundly mundane tasks that accrue with time along with a new set of responsibilities. The access to the vantage point of a past self, likewise, probably doesn't disappear but gets buried under the sediment that accrues across time.</p>
-                <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has a sense of how vulnerable that feeling is. Blaming some other person I don't know—call them Derek T minus 1—for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
-                <p>This isn't to say we don't dream. We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some artwork, and collaborate with friends. These aspirations were becoming a bottleneck to actually just sharing the music. We didn't want to wait another couple of months before we shared this music. Honestly, trying to figure out how to share this music has prevented us from diving into new projects.</p>
-                <p>We hope you enjoy it. We'd love to hear from you. If you like it, share it with some friends and family.</p>
+                <p>I don't write songs like this anymore. I can't stand lyrics. I prefer awkward chords. The energy I go for is closer to what you'd hear in an elevator than a nightclub. This is probably because I am older and boring now. The luxury of ennui and angst—the juice of a good song—disappears with the profoundly mundane tasks that accrue with time along with a new set of responsibilities. The access to the vantage point of a past self, likewise, probably doesn't disappear but gets buried under the sediment that accrues across time.</p>
+                <p>Who knows: maybe I am just distancing myself from the music. Anyone who has ever created anything and shared it with others probably has a sense of the accompanying vulnerability. Blaming some other person I don't know—call them Derek T minus 1—for making the music is just some feeble, lamentable acrobatics to keep my untouched ego nice and shiny. Plus, I don't even know if someone in my stage of life is even allowed to release indie(ish) music without some profound penalty.</p>
+                <p>This isn't to say we don't dream. We have grand ambitions to play this music live, share it with a broader music community, develop this website, expand on some songs, release more songs, bring in some artwork, collaborate with friends, get better, and connect with the local scene. These aspirations were becoming a bottleneck to sharing the music and not sharing this music was becoming a bottneck to pursuing these aspirations and other new projects. We didn't want to wait another 3 months on either account --- time to move forward, ready or not.</p>
+                <p>We hope you find something, anything in the music. We'd love to hear from you. If you like it, we'd appreciate you sharing it with some friends to help us get appraised by the wonderful sensibilities of others.</p>
                 <p>- Derek</p>
             </section>
 
@@ -240,7 +263,6 @@
                     <li><strong>Matt Berger</strong>, <strong>Nina DeBellis</strong>, and <strong>Derek Hensinger</strong> for giving feedback that helped us shape these songs. A particularly huge shoutout to Nina for hearing me ask "but do you actually like this? really? like really really?" 10,000 ^ 10,000 times.</li>
                 </ul>
             </section>
-                
         </div>
     </div>
 </body>
