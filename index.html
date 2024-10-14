@@ -109,9 +109,9 @@
         }
         
         .music-icons a img {
-            height: 50px; /* Fixed height */
-            width: auto;  /* Auto width to maintain aspect ratio */
-            margin: 0 15px;
+            width: 60px; /* Increase width of icons */
+            height: 60px; /* Increase height of icons */
+            margin: 0 10px; /* Adjust margin */
         }
 
         /* Text Content */
@@ -160,15 +160,17 @@
             }
 
             .spotify-player iframe {
-                width: 80%;
+                width: 100%;
                 height: 300px;
             }
 
+        @media (max-width: 480px) {
             .music-icons a img {
-                width: 40px;
-                height: 40px;
-                margin: 0 10px;
+                width: 50px; /* Further adjust width of icons for smaller screens */
+                height: 50px; /* Further adjust height of icons for smaller screens */
+                margin: 0 10px; /* Adjust margin */
             }
+        }
 
             .text-content h2 {
                 font-size: 1.5rem;
@@ -182,7 +184,7 @@
         @media (max-width: 480px) {
             .album-cover img {
                 max-height: 35vh; /* Reduce the max height for better fit on smaller mobile screens */
-                margin-top: 20px; /* Add space above the album image */
+                margin-top: 40px; /* Add space above the album image */
             }
         }
 
@@ -242,7 +244,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
             </a>
             <a href="https://music.youtube.com/playlist?list=OLAK5uy_l_jEZiq2LYmeKp6hQvg6if0eislc_NRJA" target="_blank">
-                <img src="https://music.youtube.com/img/on_platform_logo_dark.svg" alt="YouTube Music">
+                <img src="https://storage.googleapis.com/pe-portal-consumer-prod-wagtail-static/images/music_icon.max-1920x1070.format-webp.webp?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wagtail%40pe-portal-consumer-prod.iam.gserviceaccount.com%2F20241014%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241014T181347Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=48ec8b576b35d8caf136de618dee8c2202d492d189fb2d498af8211ec0ec4b4d4fffa864b12838b0af8f54a892cce044ca5dead6ee454ec18220963434383c6a7498d51947936f96a793aa5d7482663f26f679330bcc4a1bbb296066ab2af35a4ca1c6817409771e20dc30e40db05cdb76b350187de5b85eaf9b6fd11273f81a00e721bb3ee8e27f375e899d21fe845efc73b8e6a1615a1c62497daedf2940cbef11743e61674cd724f37f8ce992280da86eb4914c86bb2e80afa0dbd6996a04a434c0df0f2dfa71cfa1c23a491bd9444e9027fe74e32dfc88f047178710aa88492569738f82ed978eb6764017a54e3820a81ded97f9557d7da4ba45447e6121" alt="YouTube Music">
             </a>
         </div>
 
