@@ -101,7 +101,7 @@
             margin: 20px 0;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             .content {
                 margin-top: 300px; /* Adjust the value as needed to create the desired gap */
             }
@@ -152,7 +152,7 @@
         }
 
         /* Responsive Styles */
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             .banner h1 {
                 font-size: 2rem;
             }
@@ -170,11 +170,19 @@
                 height: 300px;
             }
 
+        @media (max-width: 1200px) {
+            .music-icons a img {
+                width: 80px; /* Increase size for medium screens */
+                height: 80px;
+                margin: 0 30px; /* Add more spacing */
+            }
+        }
+        
         @media (max-width: 480px) {
             .music-icons a img {
-                width: 50px; /* Further adjust width of icons for smaller screens */
-                height: 50px; /* Further adjust height of icons for smaller screens */
-                margin: 0 10px; /* Adjust margin */
+                width: 60px; /* Adjust size for smaller screens */
+                height: 60px;
+                margin: 0 20px; /* Adjust spacing */
             }
         }
 
@@ -187,7 +195,7 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 1200px) {
             .album-cover img {
                 max-height: 35vh; /* Reduce the max height for better fit on smaller mobile screens */
                 margin-top: 40px; /* Add space above the album image */
