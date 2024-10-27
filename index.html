@@ -66,6 +66,31 @@
             object-fit: contain;
         }
 
+        @keyframes glitch {
+          0%, 20%, 40%, 60%, 80%, 100% {
+            transform: translate(0, 0);
+          }
+          10% {
+            transform: translate(-5px, -5px);
+          }
+          30% {
+            transform: translate(5px, 5px);
+          }
+          50% {
+            transform: translate(-3px, 3px);
+          }
+          70% {
+            transform: translate(3px, -3px);
+          }
+        }
+        
+        .glitch {
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          animation: glitch 0.5s infinite;
+        }
+
         /* Sparkling Text */
         .sparkling-text h2 {
             font-size: 2rem;
@@ -230,7 +255,7 @@
         <div class="media-wrapper">
         <!-- Album Cover Image -->
         <div class="album-cover">
-            <img src="album_cover_web.jpg" alt="Album Cover">
+            <img src="album_cover_web.jpg" alt="Album Cover" class = "glitch">
         </div>
             
     
