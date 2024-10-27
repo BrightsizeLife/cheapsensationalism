@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Musings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Sans', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .grid-container {
+            margin-top: 160px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 80%;
+            margin: 160px auto;
+            padding: 20px;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .grid-item h3 {
+            font-size: 1.5rem;
+            color: #99ffcc;
+            margin: 10px 0;
+        }
+
+        .grid-item a {
+            color: #99ffcc;
+            text-decoration: none;
+        }
+
+        .grid-item p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+            100% { transform: translate(0); }
+        }
+
+        .grid-item.glitch {
+            animation: glitch 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <h1>Random Musings</h1>
+    </header>
+
+    <div class="grid-container">
+        <div class="grid-item" id="item1">
+            <img src="profile1.jpg" alt="Profile Picture">
+            <h3><a href="#">John Doe</a></h3>
+            <p>Philosopher of the absurd and perpetual dreamer.</p>
+        </div>
+        <div class="grid-item" id="item2">
+            <img src="profile2.jpg" alt="Profile Picture">
+            <h3><a href="#">Jane Smith</a></h3>
+            <p>A lover of puzzles, both metaphorical and literal.</p>
+        </div>
+        <div class="grid-item" id="item3">
+            <img src="profile3.jpg" alt="Profile Picture">
+            <h3><a href="#">Alex White</a></h3>
+            <p>Explorer of the mundane, with a penchant for poetry.</p>
+        </div>
+        <div class="grid-item" id="item4">
+            <img src="profile4.jpg" alt="Profile Picture">
+            <h3><a href="#">Emily Green</a></h3>
+            <p>Collector of moments, with an eye for the abstract.</p>
+        </div>
+        <div class="grid-item" id="item5">
+            <img src="profile5.jpg" alt="Profile Picture">
+            <h3><a href="#">Chris Blue</a></h3>
+            <p>A seeker of truths hidden beneath the surface.</p>
+        </div>
+        <div class="grid-item" id="item6">
+            <img src="profile6.jpg" alt="Profile Picture">
+            <h3><a href="#">Sam Yellow</a></h3>
+            <p>Always questioning, always exploring.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('glitch');
+                    setTimeout(() => {
+                        item.classList.remove('glitch');
+                    }, 200);
+                }, index * 100);
+            });
+
+            setInterval(() => {
+                const randomItem = gridItems[Math.floor(Math.random() * gridItems.length)];
+                randomItem.classList.add('glitch');
+                setTimeout(() => {
+                    randomItem.classList.remove('glitch');
+                }, 200);
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
