@@ -81,8 +81,8 @@
             position: relative;
         }
         
-        .grid-item::before,
-        .grid-item::after {
+        .glitch::before,
+        .glitch::after {
             content: '';
             position: absolute;
             top: 0;
@@ -94,13 +94,13 @@
             mix-blend-mode: screen;
         }
         
-        .grid-item::before {
+        .glitch::before {
             transform: translate(-2px, -2px);
             filter: hue-rotate(90deg);
             animation: glitch 0.2s steps(5) infinite;
         }
         
-        .grid-item::after {
+        .glitch::after {
             transform: translate(2px, 2px);
             filter: hue-rotate(180deg);
             animation: glitch 0.3s steps(5) infinite;
