@@ -68,7 +68,12 @@
         }
 
         @keyframes glitch {
-            0% { transform: translate(0); }
+            0% { opacity: 0; transform: scale(1); }
+            10% { opacity: 1; transform: scale(1); }
+            20% { opacity: 0; transform: scale(1); }
+            30% { opacity: 1; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
             10% { transform: translate(-5px, 5px) rotate(1deg); filter: hue-rotate(20deg); }
             20% { transform: translate(5px, -5px) rotate(-1deg); filter: hue-rotate(-20deg); }
             30% { transform: translate(-3px, 3px) rotate(0.5deg); }
@@ -78,7 +83,7 @@
         }
         
         .glitch {
-            animation: glitch 0.5s steps(5) infinite;
+            animation: glitch-sequence 3s steps(5) 2;
             position: relative;
         }
         
