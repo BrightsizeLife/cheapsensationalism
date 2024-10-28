@@ -76,13 +76,12 @@
             100% { transform: translate(0); }
         }
         
-        .grid-item.glitch {
+        .glitch {
             animation: glitch 0.5s steps(5) infinite;
             position: relative;
         }
         
-        .glitch::before,
-        .glitch::after {
+        .glitch::before, .glitch::after {
             content: '';
             position: absolute;
             top: 0;
@@ -105,6 +104,7 @@
             filter: hue-rotate(180deg);
             animation: glitch 0.3s steps(5) infinite;
         }
+
 
 
         /* Sparkling Text */
